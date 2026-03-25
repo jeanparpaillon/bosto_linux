@@ -1,0 +1,4 @@
+# /etc/udev/rules.d/99-bosto-pad.rules
+
+ACTION=="add|change", KERNEL=="event*", ATTRS{name}=="BOSTO 13HD Pad", \
+  ENV{ID_INPUT}="1", ENV{ID_INPUT_TABLET}="1", ENV{ID_INPUT_TABLET_PAD}="1"
