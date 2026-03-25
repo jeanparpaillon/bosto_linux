@@ -1,6 +1,7 @@
 name: Build Debian packages
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - "v*"
@@ -15,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install build dependencies
-        run: sudo apt-get update && sudo apt-get install -y debhelper dh-dkms
+        run: sudo apt-get update && sudo apt-get install -y debhelper dh-dkms build-essential
 
       - name: Build packages
         run: dpkg-buildpackage -us -uc -b
@@ -25,8 +26,10 @@ jobs:
         with:
           name: debian-packages
           path: ../*.deb
+        if: startsWith(github.ref, 'refs/tags/v')
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
           files: ../*.deb
+        if: startsWith(github.ref, 'refs/tags/v')
