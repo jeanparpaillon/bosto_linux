@@ -8,6 +8,7 @@ Currently, it has been tested on the following model:
 ## Components
 
 - Linux input kernel driver
+- udev rules (for pad support)
 - libwacom support for UI configuration tools (ie Gnome)
 
 ## Architecture

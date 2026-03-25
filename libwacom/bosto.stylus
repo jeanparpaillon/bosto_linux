@@ -1,0 +1,6 @@
+[0xed1:0x7821]
+Name=BOSTO HD13 Stylus
+Group=bosto-stylus
+Buttons=2
+Axes=Pressure
+Type=General

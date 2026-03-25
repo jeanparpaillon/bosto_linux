@@ -1,4 +1,5 @@
 sub_dirs = \
+	libwacom \
 	linux \
 	udev
 
