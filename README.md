@@ -3,7 +3,18 @@
 This project provides Linux support for BOSTO tablet.
 
 Currently, it has been tested on the following model:
-- BOSTO BT-13HD : 13" FullHD pen tablet, 8-buttons pad, 2 buttons pen, 8192 pressure level, 200LPMM 
+- BOSTO BT-13HD : 13" FullHD pen tablet, 8-buttons pad, 2 buttons pen, 8192 pressure level, 200LPMM
+
+## Build and deploy
+
+```sh
+make all
+sudo make install
+```
+
+### Debian packages
+
+Debian packages are available in [releases](https://github.com/jeanparpaillon/bosto_linux/releases)
 
 ## Components
 
