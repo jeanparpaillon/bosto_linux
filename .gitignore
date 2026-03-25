@@ -8,3 +8,17 @@
 *.symvers
 *.order
 dkms.conf
+
+debian/files
+debian/*.changes
+debian/*.dsc
+debian/*.build
+debian/*.build-*
+debian/*.buildinfo
+debian/*.debhelper
+debian/*.log
+debian/*.substvars
+debian/bosto-dkms
+debian/bosto-tablet
+debian/bosto-tools
+debian/debhelper-build-stamp

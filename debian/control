@@ -1,0 +1,29 @@
+Source: bosto-tablet
+Section: misc
+Priority: optional
+Maintainer: Jean Parpaillon <jean@parpaillon.info>
+Build-Depends: debhelper-compat (= 13), dh-dkms
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: bosto-dkms
+Architecture: all
+Depends: ${misc:Depends}, dkms
+Description: BOSTO tablet kernel driver (DKMS)
+ HID kernel driver for BOSTO drawing tablets, packaged for
+ automatic build via DKMS.
+
+Package: bosto-tools
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: libwacom-common
+Description: BOSTO tablet support files
+ udev rules and libwacom device definitions for BOSTO drawing
+ tablets.
+
+Package: bosto-tablet
+Architecture: all
+Depends: ${misc:Depends}, bosto-dkms (= ${source:Version}), bosto-tools (= ${source:Version})
+Description: BOSTO tablet full support (metapackage)
+ Metapackage that installs both the DKMS kernel driver and the
+ userspace support files for BOSTO drawing tablets.

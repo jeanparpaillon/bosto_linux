@@ -1,5 +1,5 @@
 PACKAGE_NAME="hid_bosto"
-PACKAGE_VERSION="@VERSION@"
+PACKAGE_VERSION="0.1.0"
 BUILT_MODULE_NAME[0]="hid-bosto"
 DEST_MODULE_LOCATION[0]="/kernel/drivers/input/tablet"
 AUTOINSTALL="yes"

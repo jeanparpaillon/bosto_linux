@@ -1,0 +1,4 @@
+udev/99-bosto-pad.rules lib/udev/rules.d/
+libwacom/bosto-13hd.tablet etc/libwacom/
+libwacom/bosto.stylus etc/libwacom/
+libwacom/layouts/bosto-13hd.svg etc/libwacom/layouts/

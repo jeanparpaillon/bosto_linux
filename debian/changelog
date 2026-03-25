@@ -1,0 +1,6 @@
+bosto-tablet (0.1.0) unstable; urgency=low
+
+  * Initial release.
+  * Fully support BOSTO BT-13HD tablet.
+
+ -- Jean Parpaillon <jean@parpaillon.info>  Wed, 25 Mar 2026 12:00:00 +0100

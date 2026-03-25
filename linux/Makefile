@@ -2,7 +2,8 @@ obj-m += hid-bosto.o
 
 KDIR := /lib/modules/$(shell uname -r)/build
 PWD  := $(shell pwd)
-VERSION := $(shell sed -n 's/^## \(.*\)/\1/p' ../CHANGELOG.md | head -1)
+CHANGELOG := $(firstword $(wildcard ../CHANGELOG.md CHANGELOG.md))
+VERSION := $(if $(CHANGELOG),$(shell sed -n 's/^## \(.*\)/\1/p' $(CHANGELOG) | head -1),unknown)
 ccflags-y += -DMODULE_VER=\"$(VERSION)\"
 
 all:
